@@ -68,6 +68,7 @@ auto construct() -> void {
   media.append("PC Engine CD");
   media.append("PlayStation");
   media.append("Pocket Challenge V2");
+  media.append("PV-1000");
   media.append("Saturn");
   media.append("SC-3000");
   media.append("SG-1000");

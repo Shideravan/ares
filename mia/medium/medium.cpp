@@ -23,6 +23,7 @@ namespace Media {
   #include "saturn.cpp"
   #include "supergrafx.cpp"
   #include "playstation.cpp"
+  #include "pv-1000.cpp"
   #include "sg-1000.cpp"
   #include "sc-3000.cpp"
   #include "super-famicom.cpp"
@@ -62,6 +63,7 @@ auto Medium::create(string name) -> shared_pointer<Pak> {
   if(name == "Saturn") return new Media::Saturn;
   if(name == "SuperGrafx") return new Media::SuperGrafx;
   if(name == "PlayStation") return new Media::PlayStation;
+  if(name == "PV-1000") return new Media::PV1000;
   if(name == "SG-1000") return new Media::SG1000;
   if(name == "SC-3000") return new Media::SC3000;
   if(name == "Super Famicom") return new Media::SuperFamicom;

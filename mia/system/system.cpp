@@ -21,6 +21,7 @@ namespace Systems {
   #include "saturn.cpp"
   #include "supergrafx.cpp"
   #include "playstation.cpp"
+  #include "pv-1000.cpp"
   #include "sg-1000.cpp"
   #include "sc-3000.cpp"
   #include "super-famicom.cpp"

@@ -100,5 +100,9 @@ ares currently emulates the following 27 hardware devices:
   <td><img src="docs/images/star-small.png" alt=""><img src="docs/images/star-small.png" alt=""><img src="docs/images/star-small.png" alt=""><img src="docs/images/star-small.png" alt=""></td>
   <td><a href="docs/images/gallery/wonderswan_langrisser.png">WonderSwan</a> + <a href="docs/images/gallery/wonderswan-color_riviera.png">WonderSwan Color</a> + <a href="docs/images/gallery/pocket-challenge-v2_sck1.png">Pocket Challenge V2</a></td>
 </tr>
+<tr>
+  <td><img src="docs/images/star-small.png" alt=""><img src="docs/images/starless-small.png" alt=""><img src="docs/images/starless-small.png" alt=""><img src="docs/images/starless-small.png" alt=""></td>
+  <td><a href="">PV-1000</a></td>
+</tr>
 </tbody></table>
 
