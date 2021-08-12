@@ -33,7 +33,7 @@ include $(hiro.path)/GNUmakefile
 
 profile := performance
 cores := fc sfc n64 sg ms md ps1 pce ng msx cv gb gba ws ngp
-#cores += saturn
+#cores += saturn pv1000
 
 ares.path := ../ares
 include $(ares.path)/GNUmakefile

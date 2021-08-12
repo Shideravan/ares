@@ -95,6 +95,14 @@
   #include "playstation.cpp"
 #endif
 
+#ifdef CORE_PV
+  namespace ares::PV1000 {
+    auto load(Node::System& node, string name) -> bool;
+  }
+  #include "pv-1000.cpp"
+#endif
+
+
 #ifdef CORE_SATURN
   namespace ares::Saturn {
     auto load(Node::System& node, string name) -> bool;
@@ -181,6 +189,10 @@ auto Emulator::construct() -> void {
 
   #ifdef CORE_CV
   emulators.append(new ColecoVision);
+  #endif
+
+  #ifdef CORE_PV
+  emulators.append(new PV1000);
   #endif
 
   #ifdef CORE_GB
