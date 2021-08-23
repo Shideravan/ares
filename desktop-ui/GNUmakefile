@@ -10,7 +10,7 @@ nall.path := ../nall
 include $(nall.path)/GNUmakefile
 
 ifeq ($(platform),windows)
- #vulkan := $(if $(shell if exist ..\ares\n64\vulkan\parallel-rdp) echo 1),true,false)
+ #vulkan := $(if $(shell if exist ..\ares\n64\vulkan\parallel-rdp) echo 1)gi,true,false)
   vulkan := $(if $(shell test -e ../ares/n64/vulkan/parallel-rdp && echo 1),true,false)
   local := false
 else ifeq ($(platform),linux)
@@ -32,7 +32,7 @@ hiro.resource := resource/ares.rc
 include $(hiro.path)/GNUmakefile
 
 profile := performance
-cores := fc sfc n64 sg ms md ps1 pce ng msx cv gb gba ws ngp
+cores := fc sfc n64 sg ms md ps1 pce ng msx cv gb gba ws ngp pv1000
 #cores += saturn pv1000
 
 ares.path := ../ares

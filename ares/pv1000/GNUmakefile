@@ -1,4 +1,5 @@
 ares.components += z80
+ares.components += tms9918
 
 ares.objects += ares-pv1000-cpu
 ares.objects += ares-pv1000-vdp

@@ -63,8 +63,8 @@ auto CPU::power() -> void {
   ram.write(0xc700, 0x9b);  //VDP $01 initial value
   state = {};
   bus = {};
-  bus.biosEnable = (bool)bios;
-  bus.cartridgeEnable = !(bool)bios;
+  // bus.biosEnable = (bool)bios; the system haven't firmware
+  // bus.cartridgeEnable = !(bool)bios;
   bus.pullup = 0xff;
   sio = {};
 }

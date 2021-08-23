@@ -17,6 +17,7 @@ namespace ares::PV1000 {
 
   #include <pv1000/controller/controller.hpp>
   #include <pv1000/cpu/cpu.hpp>
+  #include <pv1000/vdp/vdp.hpp>
   #include <pv1000/system/system.hpp>
   #include <pv1000/cartridge/cartridge.hpp>
 }

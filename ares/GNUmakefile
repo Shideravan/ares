@@ -71,7 +71,7 @@ ifneq ($(filter $(cores),cv),)
 endif
 
 ifneq ($(filter $(cores),pv1000),)
-  include $(ares.path)/cv/GNUmakefile
+  include $(ares.path)/pv1000/GNUmakefile
 endif
 
 ifneq ($(filter $(cores),gb),)

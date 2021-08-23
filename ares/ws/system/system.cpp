@@ -8,6 +8,7 @@ auto enumerate() -> vector<string> {
     "[Bandai] WonderSwan Color",
     "[Bandai] SwanCrystal",
     "[Benesse] Pocket Challenge V2",
+    "[Benesse] Pocket Challenge V3",
   };
 }
 
