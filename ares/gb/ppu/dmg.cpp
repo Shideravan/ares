@@ -51,11 +51,7 @@ auto PPU::scanlineDMG() -> void {
   }
 
   //sort by X-coordinate
-  for(u32 lo = 0; lo < sprites; lo++) {
-    for(u32 hi = lo + 1; hi < sprites; hi++) {
-      if(sprite[hi].x < sprite[lo].x) swap(sprite[lo], sprite[hi]);
-    }
-  }
+  sort(sprite, sprites, [](auto l, auto r) { return l.x < r.x; });
 }
 
 auto PPU::runDMG() -> void {
@@ -103,6 +99,7 @@ auto PPU::runBackgroundDMG() -> void {
 
 auto PPU::runWindowDMG() -> void {
   if(status.ly < status.wy) return;
+  if(px + 7 < status.wx) return;
   if(px + 7 == status.wx) latch.wy++;
 
   n8 scrollY = latch.wy - 1;
