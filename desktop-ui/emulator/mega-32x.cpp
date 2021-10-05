@@ -26,7 +26,7 @@ Mega32X::Mega32X() {
     device.digital("X",     virtualPorts[id].pad.x);
     device.digital("Y",     virtualPorts[id].pad.y);
     device.digital("Z",     virtualPorts[id].pad.z);
-    device.digital("Mode",  virtualPorts[id].pad.select);
+    device.digital("Mode",  virtualPorts[id].pad.mode);
     device.digital("Start", virtualPorts[id].pad.start);
     port.append(device); }
 
