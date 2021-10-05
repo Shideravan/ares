@@ -13,16 +13,20 @@ WonderSwanColor::WonderSwanColor() {
   { InputPort port{"WonderSwan Color"};
 
   { InputDevice device{"Controls"};
-    device.digital("Y1",    virtualPorts[0].pad.l1);
-    device.digital("Y2",    virtualPorts[0].pad.l2);
-    device.digital("Y3",    virtualPorts[0].pad.r1);
-    device.digital("Y4",    virtualPorts[0].pad.r2);
-    device.digital("X1",    virtualPorts[0].pad.up);
-    device.digital("X2",    virtualPorts[0].pad.right);
-    device.digital("X3",    virtualPorts[0].pad.down);
-    device.digital("X4",    virtualPorts[0].pad.left);
-    device.digital("B",     virtualPorts[0].pad.a);
-    device.digital("A",     virtualPorts[0].pad.b);
+
+    // Horizontal position
+    device.digital("X1",    virtualPorts[0].pad.up);    // Up (horizontal)
+    device.digital("X2",    virtualPorts[0].pad.right); // Right (horizontal)
+    device.digital("X3",    virtualPorts[0].pad.down);  // Down (horizontal)
+    device.digital("X4",    virtualPorts[0].pad.left);  // Left (horizontal)
+    device.digital("A",     virtualPorts[0].pad.a);
+    device.digital("B",     virtualPorts[0].pad.b);
+
+    // Vertical position
+    device.digital("Y1",    virtualPorts[0].pad.rleft);  // Left (vertical)
+    device.digital("Y2",    virtualPorts[0].pad.rup);    // Up (vertical)
+    device.digital("Y3",    virtualPorts[0].pad.rright); // Right (vertical)
+    device.digital("Y4",    virtualPorts[0].pad.rdown);  // Down (vertical)
     device.digital("Start", virtualPorts[0].pad.start);
     port.append(device); }
 
