@@ -21,7 +21,7 @@ Famicom::Famicom() {
     device.digital("A",          virtualPorts[id].pad.b);
     device.digital("Select",     virtualPorts[id].pad.select);
     device.digital("Start",      virtualPorts[id].pad.start);
-    device.digital("Microphone", virtualPorts[id].pad.x);
+    device.digital("Microphone", virtualPorts[id].pad.r1);
     port.append(device); }
 
     ports.append(port);
