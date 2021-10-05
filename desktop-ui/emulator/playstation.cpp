@@ -36,6 +36,40 @@ PlayStation::PlayStation() {
     device.digital("Start",    virtualPorts[id].pad.start);
     port.append(device); }
 
+    // Skeleton for dual-shock controller support (it needs to be implement in PlayStation core before activate)
+    // { InputDevice device{"Dual Shock Controller"};
+    // device.digital("D-Pad Up",        virtualPorts[id].pad.up);
+    // device.digital("D-Pad Down",      virtualPorts[id].pad.down);
+    // device.digital("D-Pad Left",      virtualPorts[id].pad.left);
+    // device.digital("D-Pad Right",     virtualPorts[id].pad.right);
+    // device.analog ("LAnalog-Up",      virtualPorts[id].pad.lup);
+    // device.analog ("LAnalog-Down",    virtualPorts[id].pad.ldown);
+    // device.analog ("LAnalog-Left",    virtualPorts[id].pad.lleft);
+    // device.analog ("LAnalog-Right",   virtualPorts[id].pad.lright);
+    // device.digital("LAnalog-Thumb",   virtualPorts[id].pad.thumbl);
+    // device.analog ("RAnalog-Up",      virtualPorts[id].pad.rup);
+    // device.analog ("RAnalog-Down",    virtualPorts[id].pad.rdown);
+    // device.analog ("RAnalog-Left",    virtualPorts[id].pad.rleft);
+    // device.analog ("RAnalog-Right",   virtualPorts[id].pad.rright);
+    // device.digital("RAnalog-Thumb",   virtualPorts[id].pad.thumbr);
+    // device.digital("Cross",           virtualPorts[id].pad.a);
+    // device.digital("Circle",          virtualPorts[id].pad.b);
+    // device.digital("Square",          virtualPorts[id].pad.x);
+    // device.digital("Triangle",        virtualPorts[id].pad.y);
+    // device.digital("L1",              virtualPorts[id].pad.l1);
+    // device.digital("L2",              virtualPorts[id].pad.l2);
+    // device.digital("R1",              virtualPorts[id].pad.r1);
+    // device.digital("R2",              virtualPorts[id].pad.r2);
+    // device.digital("Select",          virtualPorts[id].pad.select);
+    // device.digital("Start",           virtualPorts[id].pad.start);
+    // device.digital("Analog (button)", virtualPorts[id].pad.mode);
+    // device.rumble ("Rumble",          virtualPorts[id].pad.rumble);
+    // device.analog ("X-Axis",          virtualPorts[id].pad.lleft, virtualPorts[id].pad.lright);
+    // device.analog ("Y-Axis",          virtualPorts[id].pad.lup,   virtualPorts[id].pad.ldown);
+    // device.analog ("X-Axis",          virtualPorts[id].pad.rleft, virtualPorts[id].pad.rright);
+    // device.analog ("Y-Axis",          virtualPorts[id].pad.rup,   virtualPorts[id].pad.rdown);
+    // port.append(device); }
+    
     ports.append(port);
   }
 }
