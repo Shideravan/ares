@@ -1,15 +1,15 @@
-struct GameBoyColor : Emulator {
-  GameBoyColor();
+struct GameBoy : Emulator {
+  GameBoy();
   auto load() -> bool override;
   auto save() -> bool override;
   auto pak(ares::Node::Object) -> shared_pointer<vfs::directory> override;
 };
 
-GameBoyColor::GameBoyColor() {
+GameBoy::GameBoy() {
   manufacturer = "Nintendo";
-  name = "Game Boy Color";
+  name = "Game Boy";
 
-  { InputPort port{"Game Boy Color"};
+  { InputPort port{"Game Boy"};
 
   { InputDevice device{"Controls"};
     device.digital("Up",         virtualPorts[0].pad.up);
@@ -31,14 +31,14 @@ GameBoyColor::GameBoyColor() {
   }
 }
 
-auto GameBoyColor::load() -> bool {
-  game = mia::Medium::create("Game Boy Color");
+auto GameBoy::load() -> bool {
+  game = mia::Medium::create("Game Boy");
   if(!game->load(Emulator::load(game, configuration.game))) return false;
 
-  system = mia::System::create("Game Boy Color");
+  system = mia::System::create("Game Boy");
   if(!system->load()) return false;
 
-  if(!ares::GameBoy::load(root, "[Nintendo] Game Boy Color")) return false;
+  if(!ares::GameBoy::load(root, "[Nintendo] Game Boy")) return false;
 
   if(auto port = root->find<ares::Node::Port>("Cartridge Slot")) {
     port->allocate();
@@ -52,15 +52,15 @@ auto GameBoyColor::load() -> bool {
   return true;
 }
 
-auto GameBoyColor::save() -> bool {
+auto GameBoy::save() -> bool {
   root->save();
   system->save(system->location);
   game->save(game->location);
   return true;
 }
 
-auto GameBoyColor::pak(ares::Node::Object node) -> shared_pointer<vfs::directory> {
-  if(node->name() == "Game Boy Color") return system->pak;
-  if(node->name() == "Game Boy Color Cartridge") return game->pak;
+auto GameBoy::pak(ares::Node::Object node) -> shared_pointer<vfs::directory> {
+  if(node->name() == "Game Boy") return system->pak;
+  if(node->name() == "Game Boy Cartridge") return game->pak;
   return {};
 }
