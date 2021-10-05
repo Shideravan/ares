@@ -21,8 +21,8 @@ NeoGeoPocket::NeoGeoPocket() {
     device.digital("A",        virtualPorts[0].pad.a);
     device.digital("B",        virtualPorts[0].pad.b);
     device.digital("Option",   virtualPorts[0].pad.start);
-    device.digital("Power",    virtualPorts[0].pad.lt);
-    device.digital("Debugger", virtualPorts[0].pad.rt);
+    device.digital("Power",    virtualPorts[0].pad.select);
+    device.digital("Debugger", virtualPorts[0].pad.mode);
     port.append(device); }
 
     ports.append(port);
